@@ -22,6 +22,8 @@ body {
 
 /* header */
 .header {
+  display: flex;
+  height: 80px;
 }
 .header-web {
   color: var(--blue-color);
@@ -31,33 +33,91 @@ body {
   line-height: 16.41px;
   color: var(--blue-color);
 }
-/* flex */
-.flex-container {
+.list-link-item:nth-child(2n) {
+  color: var(--blue-color);
+}
+
+/* header-flex */
+
+.header-flex {
   display: flex;
+  height: 80px;
+  align-items: center;
 }
-.header-contacts-item,
-.header-nav-item {
-  margin-right: 50px;
-}
+
 .header-logo {
   margin-right: 91px;
+  font-family: Raleway;
+  font-size: 26px;
+  line-height: 30.52px;
 }
+.header-nav-item:not(:last-child),
+.header-contacts-item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .header-nav-list {
   margin-right: 344px;
 }
-.advatages-title,
-.photos-title,
+/* portfolio-flex */
+.portfolio-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.button-list-item:not(:last-child) {
+  margin-bottom: 56px;
+}
+.portfolio-filter {
+  display: flex;
+  gap: 8px;
+}
+.portfolio-list {
+  display: flex;
+
+  gap: 30px;
+}
+.portfolio-list-item:not(3n) {
+  flex-basis: calc((100% - 60px) / 3);
+}
+.portfolio-button {
+  height: 38px;
+}
+
+/* advatages-flex */
+.advatages-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.advatages-title {
+  display: flex;
+  justify-content: center;
+  line-height: 16.41px;
+}
+
+/* team-flex */
 .team-title {
   display: flex;
   justify-content: center;
+  padding-top: 94px;
 }
-.portfolio-filter {
+.team-flex {
+  display: flex;
   justify-content: center;
 }
-.button-list-item {
-  margin-right: 8px;
+.team-flex:not(:last-child) {
+  margin-right: 30px;
 }
-
+/* photos-flex */
+.photos-flex {
+  display: flex;
+  justify-content: center;
+}
+.photos-title {
+  display: flex;
+  justify-content: center;
+}
 /* hero  */
 .hero {
   background-color: var(--dark-blue-color);
@@ -73,17 +133,24 @@ body {
   color: var(--white-color);
   font-size: 16px;
   line-height: calc(30 / 16);
+  margin-right: 100px;
+  margin-top: 140px;
 }
 .hero-title {
+  padding-top: 175px;
+  margin-left: 200px;
   line-height: 60px;
   color: var(--white-color);
+  height: 120px;
+  width: 696px;
+  font-weight: 900;
+  font-size: 44px;
 }
-
-.header-nav-item,
-.footer-logo {
-  line-height: 31px;
+/* team */
+.team-list-item:not(:last-child) {
+  margin-right: 30px;
 }
-
+/* photos */
 .photos-title,
 .portfolio-title {
   line-height: 36px;
@@ -95,39 +162,40 @@ body {
 .photos-text {
   line-height: 18px;
 }
-
-.advatages-item {
-  color: var(--grey-color);
-  font-weight: 400;
-  line-height: inherit;
-}
 .photos-text-subtext {
   color: var(--grey-color);
   font-size: 16px;
   line-height: 18.75px;
   font-weight: 400;
 }
-
-.list-link-item:nth-child(2n) {
-  color: var(--blue-color);
+.photos-list-item:not(:last-child) {
+  margin-right: 30px;
 }
-/* portfoio */
 
+/* advatages */
+.advatages-item {
+  color: var(--grey-color);
+  font-weight: 400;
+  line-height: inherit;
+}
+.advatages {
+  margin-bottom: 118px;
+}
+.advatages-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.advatages-text {
+  width: 270px;
+}
+
+/* portfoio */
 .portfolio-pic {
   width: 370px;
   height: 294px;
 }
-.portfolio-list {
-  display: flex;
-  flex-wrap: wrap;
-  grid: calc((100% - 360px) / 9);
-}
-.portfolio-list-item {
-  margin-right: 30px;
-}
-
 .portfolio-text {
-  color: var(--grey-color);
+  color: var(--light-grey-color);
   line-height: 30px;
 }
 .portfolio-subtitle {
@@ -137,10 +205,22 @@ body {
 }
 .portfolio-button {
   line-height: calc(26 / 14);
+  background-color: rgb(245, 244, 250);
+  color: var(--black-color);
+  font-weight: 500;
+  font-size: 16px;
 }
-.portfolio-button:first-child {
+.button-list-item {
+  border-radius: 4px;
+}
+.portfolio-button:hover,
+.portfolio-button:focus {
   background-color: var(--blue-color);
   color: var(--white-color);
+}
+.portfolio {
+  margin-bottom: 94px;
+  margin-top: 94px;
 }
 
 /* footer */
@@ -150,6 +230,12 @@ body {
   background-color: var(--dark-blue-color);
   margin: 0 auto;
 }
+
+.footer-logo {
+  font-family: Raleway;
+  line-height: 31px;
+}
+
 .footer-email,
 .footer-number {
   color: var(--grey-color);
@@ -174,11 +260,4 @@ body {
 .hero,
 .photos {
   margin-bottom: 94px;
-}
-.advatages {
-  margin-bottom: 118px;
-}
-.portfolio {
-  margin-bottom: 94px;
-  margin-top: 94px;
 }
