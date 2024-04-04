@@ -30,6 +30,7 @@ a {
 figure {
   margin: 0;
 }
-.portfolio-button {
+.portfolio-button,
+.hero-button {
   border: none;
 }

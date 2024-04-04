@@ -17,7 +17,6 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
-  outline: 1px solid var(--dark-blue-color);
 }
 
 /* header */
@@ -38,7 +37,13 @@ body {
 }
 
 /* header-flex */
-
+.header {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  outline: 1px solid var(--black-color);
+}
 .header-flex {
   display: flex;
   height: 80px;
@@ -50,36 +55,51 @@ body {
   font-family: Raleway;
   font-size: 26px;
   line-height: 30.52px;
+  color: var(--black-color);
 }
 .header-nav-item:not(:last-child),
 .header-contacts-item:not(:last-child) {
   margin-right: 50px;
 }
+.header-email-link,
+.header-contacts-link {
+  color: var(--grey-color);
+}
+.header-email-link:hover,
+.header-email-link:focus {
+  color: var(--blue-color);
+}
+.header-contacts-link:hover,
+.header-contacts-link:focus {
+  color: var(--blue-color);
+}
 
 .header-nav-list {
   margin-right: 344px;
+}
+.header-list-link {
+  color: var(--black-color);
+}
+.header-list-link:hover,
+.header-list-link:focus {
+  color: var(--blue-color);
 }
 /* portfolio-flex */
 .portfolio-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 30px;
 }
-.button-list-item:not(:last-child) {
-  margin-bottom: 56px;
+.portfolio-list-item {
+  flex-basis: calc((100% - 60px) / 3);
 }
 .portfolio-filter {
   display: flex;
   gap: 8px;
+  margin-bottom: 56px;
 }
-.portfolio-list {
-  display: flex;
 
-  gap: 30px;
-}
-.portfolio-list-item:not(3n) {
-  flex-basis: calc((100% - 60px) / 3);
-}
 .portfolio-button {
   height: 38px;
 }
@@ -101,10 +121,12 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 94px;
+  align-items: center;
 }
 .team-flex {
   display: flex;
   justify-content: center;
+  background-color: rgb(245, 244, 250);
 }
 .team-flex:not(:last-child) {
   margin-right: 30px;
@@ -135,6 +157,8 @@ body {
   line-height: calc(30 / 16);
   margin-right: 100px;
   margin-top: 140px;
+  border-radius: 4px;
+  cursor: pointer;
 }
 .hero-title {
   padding-top: 175px;
@@ -143,15 +167,45 @@ body {
   color: var(--white-color);
   height: 120px;
   width: 696px;
+
   font-weight: 900;
   font-size: 44px;
+  font-family: Roboto;
 }
 /* team */
 .team-list-item:not(:last-child) {
   margin-right: 30px;
 }
+.team-into {
+  background-color: rgb(255, 255, 255);
+}
+.team-text {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.team-text-subtext {
+  display: flex;
+  justify-content: center;
+  color: var(--grey-color);
+  margin-bottom: 30px;
+}
+.team-title {
+  line-height: 41.19px;
+  font-size: 36px;
+}
+.team-list-item {
+  margin-bottom: 94px;
+  background-color: rgb(255, 255, 255);
+}
+
 /* photos */
-.photos-title,
+.photos-title {
+  margin-bottom: 50px;
+  margin-top: 94px;
+  line-height: 41.19px;
+  font-size: 36px;
+}
 .portfolio-title {
   line-height: 36px;
 }
@@ -187,21 +241,39 @@ body {
 
 .advatages-text {
   width: 270px;
+  color: var(--grey-color);
+  font-weight: 700;
+  line-height: 16.41px;
 }
 
 /* portfoio */
+.portfolio-list-item {
+  width: 370px;
+  height: 404px;
+  outline: 1px solid rgb(245, 244, 250);
+}
 .portfolio-pic {
   width: 370px;
   height: 294px;
 }
 .portfolio-text {
-  color: var(--light-grey-color);
+  color: var(--grey-color);
   line-height: 30px;
+  padding-left: 24px;
+}
+.portfolio-text:hover,
+.portfolio-text:focus {
+  color: var(--blue-color);
 }
 .portfolio-subtitle {
-  color: inherit;
+  color: var(--black-color);
+  padding-left: 24px;
   line-height: 36px;
   font-size: 18px;
+}
+.portfolio-subtitle:hover,
+.portfolio-subtitle:focus {
+  color: var(--blue-color);
 }
 .portfolio-button {
   line-height: calc(26 / 14);
@@ -210,8 +282,9 @@ body {
   font-weight: 500;
   font-size: 16px;
 }
-.button-list-item {
+.portfolio-button {
   border-radius: 4px;
+  padding: 6px 22px;
 }
 .portfolio-button:hover,
 .portfolio-button:focus {
@@ -229,11 +302,11 @@ body {
   height: 252px;
   background-color: var(--dark-blue-color);
   margin: 0 auto;
+  padding-top: 60px;
 }
-
-.footer-logo {
-  font-family: Raleway;
-  line-height: 31px;
+.footer-list {
+  margin-left: 215px;
+  margin-bottom: 60px;
 }
 
 .footer-email,
@@ -255,6 +328,7 @@ body {
   line-height: 30.52px;
   font-family: Raleway;
   font-weight: 700;
+  margin-left: 215px;
 }
 
 .hero,
