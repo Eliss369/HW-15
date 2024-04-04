@@ -193,6 +193,7 @@ body {
 .team-title {
   line-height: 41.19px;
   font-size: 36px;
+  margin-bottom: 8px;
 }
 .team-list-item {
   margin-bottom: 94px;
